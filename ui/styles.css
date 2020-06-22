@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,700;1,400&display=swap");
+@font-face {
+  font-family: SchmalfetteCP;
+  src: url("../imagesContenu/SchmalfetteCP.otf");
+}
+ /* Corps */
+body{
+  background-size: cover;
+  background-color : black;
+  background-attachment : fixed;
+  cursor : url("../imagesContenu/cursor.png"), pointer;
+}
+/*Scroll bar*/
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color : black;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  outline: 1px solid slategrey;
+}
+
+/*Image*/
+img{
+  display : block;
+  margin : 0vw 37vw 0vw;
+  width : 25%;
+  background-color: #ffffff2b;
+  border : solid;
+  border-width : 2px;
+  border-color : white;
+}
+/*Surlignage du texte*/
+::selection {
+  background:#2D6663; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffffff; /* Gecko Browsers */
+}
+.image{
+  align-content: center;
+  width: 20vw;
+  display: inline-block;
+}
+.formulaire{
+  padding-top: 100px
+}
+/* Textes */
+h1{
+    font-family: SchmalfetteCP;
+    font-size : 12vw;
+    text-align: center;
+    padding: 50px 150px 50px;
+    color: white;
+  }
+h2{
+  font-family: Josefin sans;
+  font-size : 1.5vw;
+  text-align: center;
+  padding: 0px 150px 0px;
+  color: white;
+  font-weight: lighter;
+  list-style-type: none;
+  overflow: hidden;
+  text-decoration : none;
+}
+h3{
+  font-family: Josefin sans;
+  font-size : 2vw;
+  text-align: center;
+  padding: 50px 150px 0px;
+  color: white;
+  font-weight: bold;
+  list-style-type: none;
+  overflow: hidden;
+  text-decoration : none;
+}
+h4{
+    font-family: SchmalfetteCP;
+    font-size : 8vw;
+    text-align: center;
+    padding: 0px 110px 0px;
+    color: white;
+  }
+  /* Liens */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    align-content : center;
+    top: 0;
+    position: fixed;
+    font-family: Josefin sans;
+  }
+  li {
+    float: left;
+    text-decoration: none;
+  }
+  li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+  }  
+  h1 a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  h3 a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  a:visited {
+  color: white;
+  text-decoration : none;
+}
+/* Changer la couleur du nav quand on passe la souris dessus */
+li a:hover {
+  color: #F2D64B;
+}
+/* Boutons */
+.bouton {
+  display: inline-block;
+  align-content : center;
+  position: relative;
+  list-style-type: none;
+  padding: 1.20em;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 1.5em;
+  outline: none;
+  color: white;
+  background: transparent;
+  font-family: Josefin Sans;
+  }
+  #bouton{
+    text-align : center;
+  }
+  .button span {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.button:before,
+.button:after {
+    content: '';
+    position: absolute;
+    top: 0.67em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s,opacity .6s;
+    -moz-transition: .4s,opacity .6s;
+    -o-transition: .4s,opacity .6s;
+    transition: .4s,opacity .6s;
+}
+
+/* :before */
+
+.button:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+
+/* :after */
+
+.button:after {
+    content: attr(data-active);
+    -webkit-transform: translate(150%,0);
+    -moz-transform: translate(150%,0);
+    -ms-transform: translate(150%,0);
+    -o-transform: translate(150%,0);
+    transform: translate(150%,0);
+}
+
+/* Span on :hover and :active */
+
+.button:hover span,
+.button:active span {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+}
+
+/*
+    We show :before pseudo-element on :hover
+    and :after pseudo-element on :active
+*/
+
+.button:hover:before,
+.button:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+/*
+  We hide :before pseudo-element on :active
+*/
+
+.button:active:before {
+    -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+/*Texte qui apparait quand hover images*/
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 25vw;
+  height: 25vw;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color:white;
+  overflow: hidden;
+  width: 25vw;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: #262525;
+  font-family : Josefin Sans;
+  font-size: 1.2vw;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/*Lecteur de musique*/
+
